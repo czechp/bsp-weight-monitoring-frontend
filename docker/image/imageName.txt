@@ -1,1 +1,1 @@
-czechprz/frontend-template
+czechprz/weight-monitoring-frontend
