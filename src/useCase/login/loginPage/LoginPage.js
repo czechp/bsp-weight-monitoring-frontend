@@ -38,7 +38,7 @@ const LoginPage = () => {
         const sendRequestService = new SendRequestService();
         sendRequestService.post(LOGIN_ENDPOINT, {username, password})
             .then((response) => loginSuccessfully(response))
-            .catch((error) => showErrorInfo(httpErrorHandler(error)));
+            .catch((error)=>console.log(error));
     }
 
     function loginBtnOnClick() {
