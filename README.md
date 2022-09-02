@@ -1,1 +1,1 @@
-### Frontend template
+### Frontend for weight monitoring project

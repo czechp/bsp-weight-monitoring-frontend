@@ -21,6 +21,7 @@ import HomePage from "./useCase/home/HomePage";
 import RestorePasswordDemandPage from "./useCase/account/restorePasswordDemandPage/RestorePasswordDemandPage";
 import RestorePasswordApplyTokenPage
     from "./useCase/account/restorePasswordApplyTokenPage/RestorePasswordApplyTokenPage";
+import LoginGuard from "./guard/LoginGuard";
 
 export const StatementContext = createStatementContext();
 
@@ -40,7 +41,7 @@ function App() {
                             <NavigationBarLayout/>
                         </StickyTopContainer>
                         <Routes>
-                            <Route path="/" element={<HomePage/>}/>
+                            <Route path="/" element={<LoginGuard><HomePage/></LoginGuard>}/>
                             <Route path="/login" element={<LoginPage/>}/>
                             <Route path="/register" element={<RegisterPage/>}/>
                             <Route path="/restore-password-demand" element={<RestorePasswordDemandPage/>}/>
