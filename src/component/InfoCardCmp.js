@@ -6,7 +6,7 @@ const InfoCardCmp = ({data = []}) => {
     </Container>
 }
 
-const InfoCardRow = ({row = {style: {}}, index}) => {
+const InfoCardRow = ({row = {style: {}}}) => {
     return <RowContainer>
         <RowWrapper style={row.style}>
             <RowText>{row.label}</RowText>
