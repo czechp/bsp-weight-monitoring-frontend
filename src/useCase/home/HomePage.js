@@ -24,11 +24,13 @@ const HomePage = () => {
     return <PageCmp title="Strona główna" loaded={productionLines}>
         <Container>
             {
-                //TODO: replace paths
                 productionLines && <>
                     {
                         productionLines.map((productionLine, index) => <TileCmp
-                            key={`${productionLine.id}-${Math.random()}`} title={productionLine.lineName} path={"/"}
+                            key={`${productionLine.id}-${Math.random()}`}
+                            title={productionLine.lineName}
+                            path={"/production-line-details"}
+                            routingState={productionLine.id}
                             icon={faScaleBalanced}/>)
                     }
                     <TileCmp path="/accounts" title={"Użytkownicy"} icon={faUser}/></>
@@ -37,13 +39,10 @@ const HomePage = () => {
     </PageCmp>
 }
 
-const TileCmp = ({title, icon, path, external}) => {
+const TileCmp = ({title, icon, path, external, routingState}) => {
 
     function tileOnClick() {
-        if (external)
-            openLinkInNewTab(path);
-        else
-            navigate(path);
+        if (external) openLinkInNewTab(path); else navigate(path, {state: routingState});
     }
 
     const navigate = useNavigate();
