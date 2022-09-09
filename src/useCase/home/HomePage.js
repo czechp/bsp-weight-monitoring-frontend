@@ -1,24 +1,38 @@
 import React from "react";
 import styled from "styled-components";
 import {useNavigate} from "react-router-dom";
-import {faHome, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faScaleBalanced, faUser} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
 import PageCmp from "../../component/PageCmp";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import openLinkInNewTab from "../../service/utils/openLinkInNewTab";
+import GetRequestService from "../../service/http/getRequestService";
 
 const HomePage = () => {
+    const PRODUCTION_LINES_URI = "/api/production-lines";
+
+    const getRequestService = new GetRequestService();
     const [loaded, setLoaded] = React.useState(false);
+    const {objects: productionLines} = getRequestService.getObjectsArray(PRODUCTION_LINES_URI);
+
 
     React.useEffect(() => {
         setTimeout(() => setLoaded(true), 800);
     }, []);
 
-    return <PageCmp title="Strona główna" loaded={loaded}>
+    return <PageCmp title="Strona główna" loaded={productionLines}>
         <Container>
-            <TileCmp path="/" title={"Strona główna"} icon={faHome}/>
-            <TileCmp path="/accounts" title={"Użytkownicy"} icon={faUser}/>
+            {
+                //TODO: replace paths
+                productionLines && <>
+                    {
+                        productionLines.map((productionLine, index) => <TileCmp
+                            key={`${productionLine.id}-${Math.random()}`} title={productionLine.lineName} path={"/"}
+                            icon={faScaleBalanced}/>)
+                    }
+                    <TileCmp path="/accounts" title={"Użytkownicy"} icon={faUser}/></>
+            }
         </Container>
     </PageCmp>
 }
