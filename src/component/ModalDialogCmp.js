@@ -34,7 +34,7 @@ const ModalDialogCmp = ({title, children, handler}) => {
                     <Content>
                         {children}
                     </Content>
-                    <ButtonCmp label="Cancel" onClick={closeBtnOnClick} color={colors.danger}/>
+                    <ButtonCmp label="Anuluj" onClick={closeBtnOnClick} color={colors.danger}/>
                 </ModalDialog>
             </Container>
         }
