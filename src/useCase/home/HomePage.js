@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {faUser} from "@fortawesome/free-solid-svg-icons";
+import {faIndustry, faUser} from "@fortawesome/free-solid-svg-icons";
 
 
 import PageCmp from "../../component/PageCmp";
@@ -15,6 +15,7 @@ const HomePage = () => {
 
     return <PageCmp title="Strona główna">
         <Container>
+            <TileCmp path="/production-lines" title={"Linie"} icon={faIndustry}/>
             <TileCmp path="/accounts" title={"Użytkownicy"} icon={faUser}/>
         </Container>
     </PageCmp>
