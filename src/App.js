@@ -23,6 +23,7 @@ import RestorePasswordApplyTokenPage
     from "./useCase/account/restorePasswordApplyTokenPage/RestorePasswordApplyTokenPage";
 import LoginGuard from "./guard/LoginGuard";
 import ProductionLineDetailsPage from "./useCase/productionLine/productionLineDetailsPage/ProductionLineDetailsPage";
+import ProductionLinesPage from "./useCase/productionLine/ProductionLinesPage";
 
 export const StatementContext = createStatementContext();
 
@@ -52,7 +53,9 @@ function App() {
                             <Route path="/account-details" element={<AdminGuard><AccountDetailsPage/></AdminGuard>}/>
                             <Route path="/not-logged" element={<LoginRequirementPage/>}/>
                             <Route path="/admin-access" element={<AdminRequirementPage/>}/>
-                            <Route path="/production-line-details" element={<LoginGuard><ProductionLineDetailsPage /></LoginGuard>} />
+                            <Route path="/production-line-details"
+                                   element={<LoginGuard><ProductionLineDetailsPage/></LoginGuard>}/>
+                            <Route path="/production-lines" element={<LoginGuard><ProductionLinesPage/></LoginGuard>}/>
                         </Routes>
 
                     </ContainerLayout>

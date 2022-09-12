@@ -1,5 +1,4 @@
 import InfoCardCmp from "../../../../component/InfoCardCmp";
-import dateConverter from "../../../../service/converter/dateConverter";
 import DateConverter from "../../../../service/converter/dateConverter";
 
 const ProductionLineDetailsInfoCmp = ({productionLine}) => {

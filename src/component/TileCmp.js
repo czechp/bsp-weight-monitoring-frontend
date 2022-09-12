@@ -37,7 +37,7 @@ const Tile = styled.div`
 `;
 
 const TileHeader = styled.h3`
-    margin: 0 0 2rem 0;
+  margin: 0 0 2rem 0;
 `;
 
 export default TileCmp;
