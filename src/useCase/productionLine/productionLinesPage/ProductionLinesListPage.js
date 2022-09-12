@@ -1,13 +1,13 @@
 import React from "react";
 
 
-import GetRequestService from "../../service/http/getRequestService";
-import PageCmp from "../../component/PageCmp";
-import TileCmp from "../../component/TileCmp";
+import GetRequestService from "../../../service/http/getRequestService";
+import PageCmp from "../../../component/PageCmp";
+import TileCmp from "../../../component/TileCmp";
 import {faScaleBalanced} from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
-const ProductionLinesPage = () => {
+const ProductionLinesListPage = () => {
     const PRODUCTION_LINES_URI = "/api/production-lines";
 
     const getRequestService = new GetRequestService();
@@ -38,4 +38,4 @@ const Container = styled.div`
 `;
 
 
-export default ProductionLinesPage;
+export default ProductionLinesListPage;
