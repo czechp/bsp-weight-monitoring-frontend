@@ -1,4 +1,3 @@
-
 function errorObjectExist(error) {
     return error?.response?.status;
 }
