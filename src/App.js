@@ -55,7 +55,8 @@ function App() {
                             <Route path="/admin-access" element={<AdminRequirementPage/>}/>
                             <Route path="/production-line-details"
                                    element={<LoginGuard><ProductionLineDetailsPage/></LoginGuard>}/>
-                            <Route path="/production-lines" element={<LoginGuard><ProductionLinesListPage/></LoginGuard>}/>
+                            <Route path="/production-lines"
+                                   element={<LoginGuard><ProductionLinesListPage/></LoginGuard>}/>
                         </Routes>
 
                     </ContainerLayout>

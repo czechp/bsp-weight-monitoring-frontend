@@ -17,19 +17,10 @@ const ActivateAccountPage = () => {
 
 
     return <PageCmp title="Aktywacja konta">
-        <DevelopmentSection activationCode={activationCode}/>
         <ActivationForm activationCode={activationCode}/>
     </PageCmp>
 }
 
-const DevelopmentSection = ({activationCode}) => {
-    return <>
-        {activationCode && <DevelopmentContainer>
-            It's a development mode your activation code will fill automatically.
-            <hr/>
-        </DevelopmentContainer>}
-    </>
-}
 
 const ActivationForm = ({activationCode: myActivationCode}) => {
     const ACTIVATION_ENDPOINT = "/api/accounts/email-confirmation";

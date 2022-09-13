@@ -4,6 +4,7 @@ import {useLocation} from "react-router-dom";
 import PageCmp from "../../../component/PageCmp";
 import GetRequestService from "../../../service/http/getRequestService";
 import ProductionLineDetailsInfoCmp from "./component/ProductionLineDetailsInfoCmp";
+import ProductionLineDeleteCmp from "./component/ProductionLineDeleteCmp";
 
 const ProductionLineDetailsPage = () => {
     const PRODUCTION_LINE_URI = "/api/production-lines";
@@ -16,6 +17,7 @@ const ProductionLineDetailsPage = () => {
     return <PageCmp title={pageTitle}>
         {
             productionLine && <>
+                <ProductionLineDeleteCmp productionLine={productionLine}/>
                 <ProductionLineDetailsInfoCmp productionLine={productionLine}/>
             </>
         }
