@@ -17,7 +17,7 @@ const ProductionLineDetailsPage = () => {
     return <PageCmp title={pageTitle}>
         {
             productionLine && <>
-                <ProductionLineDeleteCmp productionLine={productionLine} />
+                <ProductionLineDeleteCmp productionLine={productionLine}/>
                 <ProductionLineDetailsInfoCmp productionLine={productionLine}/>
             </>
         }

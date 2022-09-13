@@ -10,7 +10,10 @@ import {StatementContext} from "../../../../App";
 import SendRequestService from "../../../../service/http/sendRequestService";
 import httpErrorHandler from "../../../../service/http/httpErrorHandler";
 
-const ProductionLineAddComponent = ({reload=()=>{}}) => {
+const ProductionLineAddComponent = ({
+                                        reload = () => {
+                                        }
+                                    }) => {
     const inputConstraints = {
         newLineNameMinLength: 3
     }

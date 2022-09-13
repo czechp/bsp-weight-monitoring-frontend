@@ -16,7 +16,7 @@ const ProductionLinesListPage = () => {
 
     return <PageCmp title="Linie" loaded={productionLines}>
         <Container>
-            <ProductionLineAddComponent reload={reloadRequest} />
+            <ProductionLineAddComponent reload={reloadRequest}/>
             <TileContainer>
                 {
                     productionLines && <>
