@@ -13,6 +13,7 @@ const NavigationBarLayout = () => {
         <Container>
             <ButtonCmp width={BUTTON_WIDTH} label={"Strona główna"} onClick={() => navigate("/")}/>
             <ButtonCmp width={BUTTON_WIDTH} label={"Linie"} onClick={() => navigate("/production-lines")}/>
+            <ButtonCmp width={BUTTON_WIDTH} label={"Moduły wagowe"} onClick={() => navigate("/weight-modules")}/>
             <ButtonCmp width={BUTTON_WIDTH} label={"Użytkownicy"} onClick={() => navigate("/accounts")}/>
         </Container>
         <SeparatorCmp/>
