@@ -1,5 +1,5 @@
-import {Table, Tbody, Td, Th, Thead, Tr} from "../../../configuration/styledComponents/Table";
-import colors from "../../../configuration/style/colors";
+import {Table, Tbody, Td, Th, Thead, Tr} from "../../../../configuration/styledComponents/Table";
+import colors from "../../../../configuration/style/colors";
 
 const WeightModuleListCmp = ({weightModules = [], setSortingField}) => {
     return <>
