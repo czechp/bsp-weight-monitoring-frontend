@@ -1,5 +1,5 @@
-import PageCmp from "../../component/PageCmp";
-import GetRequestService from "../../service/http/getRequestService";
+import PageCmp from "../../../component/PageCmp";
+import GetRequestService from "../../../service/http/getRequestService";
 import WeightModuleListCmp from "./component/WeightModuleListCmp";
 
 const WeightModuleListPage = () => {

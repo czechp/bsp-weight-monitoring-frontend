@@ -24,7 +24,8 @@ import RestorePasswordApplyTokenPage
 import LoginGuard from "./guard/LoginGuard";
 import ProductionLineDetailsPage from "./useCase/productionLine/productionLineDetailsPage/ProductionLineDetailsPage";
 import ProductionLinesListPage from "./useCase/productionLine/productionLinesPage/ProductionLinesListPage";
-import WeightModuleListPage from "./useCase/weightModule/WeightModuleListPage";
+import WeightModuleListPage from "./useCase/weightModule/weightModuleListPage/WeightModuleListPage";
+import WeightModuleDetailsPage from "./useCase/weightModule/weightModuleDetailsPage/WeightModuleDetailsPage";
 
 export const StatementContext = createStatementContext();
 
@@ -59,6 +60,7 @@ function App() {
                             <Route path="/production-lines"
                                    element={<LoginGuard><ProductionLinesListPage/></LoginGuard>}/>
                             <Route path="/weight-modules" element={<LoginGuard><WeightModuleListPage/></LoginGuard>}/>
+                            <Route path="/weight-module-details" element={<LoginGuard><WeightModuleDetailsPage /></LoginGuard>} />
                         </Routes>
 
                     </ContainerLayout>
