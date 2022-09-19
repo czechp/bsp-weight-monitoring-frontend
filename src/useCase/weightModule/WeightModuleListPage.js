@@ -7,10 +7,10 @@ const WeightModuleListPage = () => {
     const getRequestService = new GetRequestService();
     const {objects: weightModules, setSortingField} = getRequestService.getObjectsArray(URL);
 
-    return <PageCmp title="Lista modułów wagowych" loaded={weightModules} >
+    return <PageCmp title="Lista modułów wagowych" loaded={weightModules}>
         {
             weightModules && <>
-            <WeightModuleListCmp weightModules={weightModules} setSortingField={setSortingField}/>
+                <WeightModuleListCmp weightModules={weightModules} setSortingField={setSortingField}/>
             </>
         }
     </PageCmp>

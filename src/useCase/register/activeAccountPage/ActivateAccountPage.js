@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import {useLocation, useNavigate} from "react-router-dom";
 
 import PageCmp from "../../../component/PageCmp";
@@ -46,7 +45,7 @@ const ActivationForm = ({activationCode: myActivationCode}) => {
             sendActivationRequest();
         else
             showErrorInfo("Kod aktywacyjny musi mieć 36 znaków")
-    };
+    }
 
     return <FormCmp>
         <TextInputCmp label="Kod aktywacyjny:"
@@ -58,15 +57,6 @@ const ActivationForm = ({activationCode: myActivationCode}) => {
         <ButtonCmp label="Aktywuj konto" onClick={activationBtnOnClick}/>
     </FormCmp>
 }
-
-const DevelopmentContainer = styled.div`
-  color: ${({theme}) => theme.colors.primary};
-  font-size: 20px;
-  font-style: italic;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 50px;
-`
 
 
 export default ActivateAccountPage;

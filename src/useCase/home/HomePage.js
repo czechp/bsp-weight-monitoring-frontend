@@ -10,10 +10,10 @@ const HomePage = () => {
     const [loaded, setLoaded] = React.useState(false);
 
     React.useEffect(() => {
-        setTimeout(() => setLoaded(true), 800);
+        setTimeout(() => setLoaded(true), 500);
     }, []);
 
-    return <PageCmp title="Strona główna">
+    return <PageCmp title="Strona główna" loaded={loaded}>
         <Container>
             <TileCmp path="/production-lines" title={"Linie"} icon={faIndustry}/>
             <TileCmp path="/weight-modules" title={"Moduły wagowe"} icon={faScaleBalanced}/>
