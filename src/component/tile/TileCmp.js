@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import openLinkInNewTab from "../service/utils/openLinkInNewTab";
+import openLinkInNewTab from "../../service/utils/openLinkInNewTab";
 import {useNavigate} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React from "react";
