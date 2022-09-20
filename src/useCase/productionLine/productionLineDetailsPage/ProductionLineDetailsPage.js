@@ -5,6 +5,7 @@ import PageCmp from "../../../component/PageCmp";
 import GetRequestService from "../../../service/http/getRequestService";
 import ProductionLineDetailsInfoCmp from "./component/ProductionLineDetailsInfoCmp";
 import ProductionLineDeleteCmp from "./component/ProductionLineDeleteCmp";
+import ProductionLineWeightModuleList from "./component/ProductionLineWeightModuleList";
 
 const ProductionLineDetailsPage = () => {
     const PRODUCTION_LINE_URI = "/api/production-lines";
@@ -19,6 +20,7 @@ const ProductionLineDetailsPage = () => {
             productionLine && <>
                 <ProductionLineDeleteCmp productionLine={productionLine}/>
                 <ProductionLineDetailsInfoCmp productionLine={productionLine}/>
+                <ProductionLineWeightModuleList productionLineId={productionLine.id} />
             </>
         }
     </PageCmp>
