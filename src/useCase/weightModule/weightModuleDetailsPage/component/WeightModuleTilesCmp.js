@@ -5,7 +5,6 @@ import {faPowerOff} from "@fortawesome/free-solid-svg-icons";
 import colors from "../../../../configuration/style/colors";
 
 const WeightModuleTilesCmp = ({weightModule}) => {
-    console.log(weightModule)
     return <Container>
         <TileInfoCmp title="Linia:" fontSize="large">{weightModule.productionLineName}</TileInfoCmp>
         <TileInfoCmp title="Stan:">
