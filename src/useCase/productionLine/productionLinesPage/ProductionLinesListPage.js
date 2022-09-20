@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import GetRequestService from "../../../service/http/getRequestService";
 import PageCmp from "../../../component/PageCmp";
-import TileCmp from "../../../component/TileCmp";
+import TileCmp from "../../../component/tile/TileCmp";
 import {faIndustry} from "@fortawesome/free-solid-svg-icons";
 import ProductionLineAddComponent from "./component/ProductionLineAddComponent";
 

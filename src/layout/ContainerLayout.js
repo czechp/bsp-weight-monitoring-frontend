@@ -12,6 +12,7 @@ export const StickyTopContainer = styled.div`
   position: sticky;
   top: 0;
   z-index: 5;
+  background-color: white;
 `
 
 const Container = styled.div`

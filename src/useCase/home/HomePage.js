@@ -4,7 +4,7 @@ import {faIndustry, faScaleBalanced, faUser} from "@fortawesome/free-solid-svg-i
 
 
 import PageCmp from "../../component/PageCmp";
-import TileCmp from "../../component/TileCmp";
+import TileCmp from "../../component/tile/TileCmp";
 
 const HomePage = () => {
     const [loaded, setLoaded] = React.useState(false);

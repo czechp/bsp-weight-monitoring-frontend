@@ -1,5 +1,6 @@
-import {Table, Tbody, Td, Th, Thead, Tr} from "../../../configuration/styledComponents/Table";
-import colors from "../../../configuration/style/colors";
+import {Table, Tbody, Td, Th, Thead, Tr} from "../../../../configuration/styledComponents/Table";
+import colors from "../../../../configuration/style/colors";
+import {useNavigate} from "react-router-dom";
 
 const WeightModuleListCmp = ({weightModules = [], setSortingField}) => {
     return <>
@@ -23,8 +24,10 @@ const WeightModuleListCmp = ({weightModules = [], setSortingField}) => {
 }
 
 const WeightModuleInfoRow = ({weightModule}) => {
+    const navigate = useNavigate();
     const statusColor = weightModule.moduleStatus.status ? colors.success : colors.danger;
-    return <Tr>
+
+    return <Tr onClick={() => navigate("/weight-module-details", {state: weightModule.id})}>
         <Td>{weightModule.id}</Td>
         <Td>{weightModule.productionLineName}</Td>
         <Td style={{color: statusColor}}>{weightModule.moduleStatus.status ? "Włączony" : "Wyłączony"}</Td>
