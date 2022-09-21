@@ -37,7 +37,6 @@ const WeightModuleTilesCmp = ({weightModule}) => {
 function determineCorrectnessColor(correctnessPercent){
     const GREEN_UP_RANGE = 95;
     const ORANGE_UP_RANGE = 90;
-    const RED_UP_RANGE = 85;
 
     if(correctnessPercent >= GREEN_UP_RANGE)
         return colors.success;
