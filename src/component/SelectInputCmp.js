@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 const SelectInputCmp = ({label = "", value, setValue, options}) => {
@@ -6,6 +7,10 @@ const SelectInputCmp = ({label = "", value, setValue, options}) => {
         setValue(event.target.value);
     };
 
+
+    React.useEffect(() => {
+        if (options.length > 0) setValue(options[0].value)
+    }, [options, setValue]);
     return <Container>
         <Label>{label}</Label>
         <Select value={value} onChange={selectFieldOnChange}>
