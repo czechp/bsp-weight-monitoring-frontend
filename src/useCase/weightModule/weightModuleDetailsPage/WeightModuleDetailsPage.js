@@ -14,7 +14,7 @@ const WeightModuleDetailsPage = () => {
         {
             weightModule && <>
                 <WeightModuleDetailsCmp weightModule={weightModule}/>
-                <WeightModuleDeleteCmp weightModuleId={weightModule.id} />
+                <WeightModuleDeleteCmp weightModuleId={weightModule.id}/>
             </>
         }
 

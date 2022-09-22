@@ -11,7 +11,7 @@ const WeightModuleListPage = () => {
     return <PageCmp title="Lista modułów wagowych" loaded={weightModules}>
         {
             weightModules && <>
-                <WeightModuleCreateCmp reloadData={reloadRequest} />
+                <WeightModuleCreateCmp reloadData={reloadRequest}/>
                 <WeightModuleListCmp weightModules={weightModules} setSortingField={setSortingField}/>
             </>
         }
