@@ -60,7 +60,8 @@ function App() {
                             <Route path="/production-lines"
                                    element={<LoginGuard><ProductionLinesListPage/></LoginGuard>}/>
                             <Route path="/weight-modules" element={<LoginGuard><WeightModuleListPage/></LoginGuard>}/>
-                            <Route path="/weight-module-details" element={<LoginGuard><WeightModuleDetailsPage /></LoginGuard>} />
+                            <Route path="/weight-module-details"
+                                   element={<LoginGuard><WeightModuleDetailsPage/></LoginGuard>}/>
                         </Routes>
 
                     </ContainerLayout>
