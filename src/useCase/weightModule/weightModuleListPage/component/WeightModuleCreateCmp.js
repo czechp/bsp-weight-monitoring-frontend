@@ -44,7 +44,7 @@ const WeightModuleCreateCmp = ({
             <ModalDialogCmp title="Dodaj nowy moduł wagowy I" handler={modalHandler}>
                 <SelectInputCmp label="Wybierz linie:" value={selectedLineId} setValue={setSelectedLineId}
                                 options={lines}/>
-                <ButtonCmp label="Dodaj linie" color={colors.success} onClick={sendCreateRequest}/>
+                <ButtonCmp label="Dodaj moduł wagowy I" color={colors.success} onClick={sendCreateRequest}/>
             </ModalDialogCmp>
         </>
         }</Container>
