@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import WeightModuleTilesCmp from "./WeightModuleTilesCmp";
 
-const WeightModuleDetailsCmp = ({weightModule, firstModule}) => {
+const WeightModuleDetailsCmp = ({weightModule, firstModule=true}) => {
     return <Container>
         {weightModule && <>
             <WeightModuleTilesCmp weightModule={weightModule} firstModule={firstModule}/>

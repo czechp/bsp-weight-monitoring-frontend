@@ -21,6 +21,7 @@ const ProductionLineDetailsPage = () => {
                 <ProductionLineDeleteCmp productionLine={productionLine}/>
                 <ProductionLineDetailsInfoCmp productionLine={productionLine}/>
                 <ProductionLineWeightModuleList productionLineId={productionLine.id}/>
+                <ProductionLineWeightModuleList productionLineId={productionLine.id} firstModule={false}/>
             </>
         }
     </PageCmp>
