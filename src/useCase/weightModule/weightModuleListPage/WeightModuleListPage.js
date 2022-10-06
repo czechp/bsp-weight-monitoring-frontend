@@ -4,15 +4,22 @@ import WeightModuleListCmp from "./component/WeightModuleListCmp";
 import WeightModuleCreateCmp from "./component/WeightModuleCreateCmp";
 
 const WeightModuleListPage = () => {
-    const URL = "/api/weight-modules";
+    const FIRST_MODULES_URL = "/api/weight-modules";
+    const LAST_MODULES_URL = "/api/weight-modules-last";
     const getRequestService = new GetRequestService();
-    const {objects: weightModules, setSortingField, reloadRequest} = getRequestService.getObjectsArray(URL);
+    const {objects: weightModules, setSortingField, reloadRequest} = getRequestService.getObjectsArray(FIRST_MODULES_URL);
+    const {objects: weightModulesLast, setSortingFieldLast, reloadRequestLast} = getRequestService.getObjectsArray(LAST_MODULES_URL);
 
     return <PageCmp title="Lista modułów wagowych" loaded={weightModules}>
         {
             weightModules && <>
                 <WeightModuleCreateCmp reloadData={reloadRequest}/>
                 <WeightModuleListCmp weightModules={weightModules} setSortingField={setSortingField}/>
+            </>
+        }
+        {
+            weightModulesLast && <>
+                <WeightModuleListCmp weightModules={weightModulesLast} setSortingField={setSortingFieldLast} firstModules={false}/>
             </>
         }
     </PageCmp>
