@@ -31,11 +31,11 @@ const AccountDeleteCmp = ({accountId}) => {
         navigate("/accounts")
     }
 
-    return <FormCmp title="Delete account">
-        <ButtonCmp label="Delete" color={colors.danger} onClick={deleteBtnOnClick}/>
+    return <FormCmp title="Usuń konto">
+        <ButtonCmp label="Usuń" color={colors.danger} onClick={deleteBtnOnClick}/>
         <ModalDialogCmp title="Do you want to remove this account?" handler={modalHandler}>
             <FormCmp>
-                <ButtonCmp label="Remove" onClick={confirmRemovingBtnOnClick} color={colors.success}/>
+                <ButtonCmp label="Usuń" onClick={confirmRemovingBtnOnClick} color={colors.success}/>
             </FormCmp>
         </ModalDialogCmp>
     </FormCmp>

@@ -11,18 +11,18 @@ const AccountsListPage = () => {
     const getRequestService = new GetRequestService();
     const {objects: accounts, setSortingField} = getRequestService.getObjectsArray("/api/accounts");
 
-    return <PageCmp title="Accounts list" loaded={accounts}>
+    return <PageCmp title="Użytkownicy" loaded={accounts}>
         {
             accounts && <Table>
                 <Thead>
                     <Tr>
                         <Th onClick={() => setSortingField("id")}>Id:</Th>
-                        <Th onClick={() => setSortingField("username")}>Username:</Th>
+                        <Th onClick={() => setSortingField("username")}>Login:</Th>
                         <Th onClick={() => setSortingField("email")}>Email:</Th>
-                        <Th onClick={() => setSortingField("accountRole")}>Role:</Th>
-                        <Th>Admin confirm:</Th>
-                        <Th>Email confirm:</Th>
-                        <Th onClick={() => setSortingField("creationTimestamp")}>Creation date:</Th>
+                        <Th onClick={() => setSortingField("accountRole")}>Uprawnienia:</Th>
+                        <Th>Aktywacja administratora:</Th>
+                        <Th>Potwierdzenie email:</Th>
+                        <Th onClick={() => setSortingField("creationTimestamp")}>Data utworzenia:</Th>
                     </Tr>
                 </Thead>
                 <Tbody>

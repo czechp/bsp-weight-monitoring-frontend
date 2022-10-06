@@ -23,7 +23,7 @@ const AccountAdminActivationCmp = ({accountId, reloadAccount}) => {
 
     function activationUpdated(activate) {
         reloadAccount();
-        showSuccessInfo(`Account ${activate ? "activated" : "deactivated"}`);
+        showSuccessInfo(`Konto ${activate ? "aktywowane" : "dezatykwowane"}`);
     }
 
     function sendActivationRequest(activate) {
@@ -33,10 +33,10 @@ const AccountAdminActivationCmp = ({accountId, reloadAccount}) => {
             .catch((error) => showErrorInfo(httpErrorHandler(error)));
     }
 
-    return <FormCmp title="Admin activation">
+    return <FormCmp title="Aktywacja administratora">
         <Container>
-            <ButtonCmp label="Activate" style={{width: "45%"}} color={colors.success} onClick={activationBtnOnClick}/>
-            <ButtonCmp label="Deactivate" style={{width: "45%"}} color={colors.danger}
+            <ButtonCmp label="Aktywuj" style={{width: "45%"}} color={colors.success} onClick={activationBtnOnClick}/>
+            <ButtonCmp label="Dezaktywuj" style={{width: "45%"}} color={colors.danger}
                        onClick={deactivationBtnOnClick}/>
         </Container>
     </FormCmp>

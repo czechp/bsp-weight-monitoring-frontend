@@ -16,7 +16,7 @@ const AccountDetailsPage = () => {
         reloadRequest
     } = getRequestService.getObject(`${ACCOUNT_DETAILS_ENDPOINT}/${accountId}`);
 
-    return <PageCmp title="Account details" loaded={account}>
+    return <PageCmp title="Szczegóły użytkownika" loaded={account}>
         {
             account && <>
                 <AccountDetailsInfoCmp account={account}/>
