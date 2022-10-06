@@ -10,11 +10,11 @@ const WeightModuleLastDetailsPage = () => {
     const {object: weightModuleLast} = getRequestService.getObject(`${URL}/${weightModuleLastId}`);
 
     return <PageCmp title={"Moduł wagowy II -  szczegóły"}>
-        {weightModuleLast &&  <>
+        {weightModuleLast && <>
             <WeightModuleDetailsCmp weightModule={weightModuleLast} firstModule={false}/>
         </>}
     </PageCmp>
 }
 
 
-export  default  WeightModuleLastDetailsPage;
+export default WeightModuleLastDetailsPage;
