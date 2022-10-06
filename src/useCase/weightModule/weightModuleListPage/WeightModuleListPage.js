@@ -19,7 +19,7 @@ const WeightModuleListPage = () => {
         }
         {
             weightModulesLast && <>
-                <WeightModuleListCmp weightModules={weightModulesLast} setSortingField={setSortingFieldLast} firstModules={false}/>
+                <WeightModuleListCmp weightModules={weightModulesLast} setSortingField={setSortingFieldLast} firstModule={false}/>
             </>
         }
     </PageCmp>

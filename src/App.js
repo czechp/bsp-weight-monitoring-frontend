@@ -26,6 +26,7 @@ import ProductionLineDetailsPage from "./useCase/productionLine/productionLineDe
 import ProductionLinesListPage from "./useCase/productionLine/productionLinesPage/ProductionLinesListPage";
 import WeightModuleListPage from "./useCase/weightModule/weightModuleListPage/WeightModuleListPage";
 import WeightModuleDetailsPage from "./useCase/weightModule/weightModuleDetailsPage/WeightModuleDetailsPage";
+import WeightModuleLastDetailsPage from "./useCase/weightModule/weightModuleLastDetalsPage/WeightModuleLastDetailsPage";
 
 export const StatementContext = createStatementContext();
 
@@ -62,6 +63,8 @@ function App() {
                             <Route path="/weight-modules" element={<LoginGuard><WeightModuleListPage/></LoginGuard>}/>
                             <Route path="/weight-module-details"
                                    element={<LoginGuard><WeightModuleDetailsPage/></LoginGuard>}/>
+                            <Route path="/weight-module-last-details"
+                                   element={<LoginGuard><WeightModuleLastDetailsPage/></LoginGuard>}/>
                         </Routes>
 
                     </ContainerLayout>
