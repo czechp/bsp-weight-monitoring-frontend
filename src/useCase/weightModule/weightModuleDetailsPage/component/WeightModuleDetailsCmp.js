@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import WeightModuleTilesCmp from "./WeightModuleTilesCmp";
 
-const WeightModuleDetailsCmp = ({weightModule}) => {
+const WeightModuleDetailsCmp = ({weightModule, firstModule}) => {
     return <Container>
         {weightModule && <>
-            <WeightModuleTilesCmp weightModule={weightModule}/>
+            <WeightModuleTilesCmp weightModule={weightModule} firstModule={firstModule}/>
         </>}
     </Container>
 }

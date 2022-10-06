@@ -10,7 +10,7 @@ const WeightModuleDetailsPage = () => {
     const {state: weightModuleId} = useLocation();
     const {object: weightModule} = getRequestService.getObject(`${URL}/${weightModuleId}`);
 
-    return <PageCmp title="Moduł wagowy -  szczegóły" loaded={weightModule}>
+    return <PageCmp title="Moduł wagowy I -  szczegóły" loaded={weightModule}>
         {
             weightModule && <>
                 <WeightModuleDetailsCmp weightModule={weightModule}/>
