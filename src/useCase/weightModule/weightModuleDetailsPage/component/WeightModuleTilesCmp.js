@@ -23,7 +23,7 @@ const WeightModuleTilesCmp = ({weightModule}) => {
         <TileInfoCmp title="Waga produktu:"
                      fontSize="middle">{`${weightModule.productInfo.downRangeWeight.toFixed(1)}-${weightModule.productInfo.upRangeWeight.toFixed(1)} g`}</TileInfoCmp>
         <TileInfoCmp title="Ilość parafiny razem:"
-                     fontSize="middle">{weightModule.moduleStatus.currentDosingDevice.toFixed(1) + " kg"}</TileInfoCmp>
+                     fontSize="middle">{weightModule.productionIndicators.totalMaterialWeight.toFixed(1) + " kg"}</TileInfoCmp>
         <TileInfoCmp title="Ilość produktu:"
                      fontSize="middle">{weightModule.productionIndicators.totalProductPcs + " szt."}</TileInfoCmp>
         <TileInfoCmp title="Aktualny pomiar:"

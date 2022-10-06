@@ -1,9 +1,11 @@
 import {Table, Tbody, Td, Th, Thead, Tr} from "../../../../configuration/styledComponents/Table";
 import colors from "../../../../configuration/style/colors";
 import {useNavigate} from "react-router-dom";
+import TitleCmp from "../../../../component/TitleCmp";
 
-const WeightModuleListCmp = ({weightModules = [], setSortingField}) => {
+const WeightModuleListCmp = ({weightModules = [], setSortingField, firstModules=true}) => {
     return <>
+        <TitleCmp title={`Moduły ${firstModules ? "I" : "II"}`} />
         <Table>
             <Thead>
                 <Tr>
