@@ -27,10 +27,10 @@ const AccountChangeRoleCmp = ({account, reloadAccount}) => {
         reloadAccount();
     }
 
-    return <FormCmp title="Change role">
+    return <FormCmp title="Zmień uprawnienia">
         <Container>
             <SelectFieldCmp value={accountRole} onChange={setAccountRole} options={ACCOUNT_ROLES} width={45}/>
-            <ButtonCmp label="Change role" width={45} onClick={changeRoleBtnOnClick}/>
+            <ButtonCmp label="Zmień uprawnienia" width={45} onClick={changeRoleBtnOnClick}/>
         </Container>
     </FormCmp>
 }
