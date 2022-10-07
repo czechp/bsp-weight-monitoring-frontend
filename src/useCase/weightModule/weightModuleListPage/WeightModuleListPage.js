@@ -14,8 +14,8 @@ const WeightModuleListPage = () => {
     } = getRequestService.getObjectsArray(FIRST_MODULES_URL);
     const {
         objects: weightModulesLast,
-        setSortingFieldLast,
-        reloadRequestLast
+        setSortingField:setSortingFieldLast,
+        reloadRequest:reloadRequestLast
     } = getRequestService.getObjectsArray(LAST_MODULES_URL);
 
     return <PageCmp title="Lista modułów wagowych" loaded={weightModules}>
@@ -27,6 +27,7 @@ const WeightModuleListPage = () => {
         }
         {
             weightModulesLast && <>
+                <WeightModuleCreateCmp reloadData={reloadRequestLast} firstModule={false}/>
                 <WeightModuleListCmp weightModules={weightModulesLast} setSortingField={setSortingFieldLast}
                                      firstModule={false}/>
             </>

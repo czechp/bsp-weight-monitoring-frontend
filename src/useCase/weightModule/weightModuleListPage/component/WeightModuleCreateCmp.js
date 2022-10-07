@@ -12,6 +12,7 @@ import {StatementContext} from "../../../../App";
 import httpErrorHandler from "../../../../service/http/httpErrorHandler";
 
 const WeightModuleCreateCmp = ({
+                                   firstModule = true,
                                    reloadData = () => {
                                    }
                                }) => {
@@ -23,7 +24,7 @@ const WeightModuleCreateCmp = ({
     const [selectedLineId, setSelectedLineId] = React.useState(0);
 
     const sendCreateRequest = () => {
-        const URL = "/api/weight-modules";
+        const URL = firstModule ? "/api/weight-modules": "/api/weight-modules-last";
         sendRequestService.post(URL, {productionLineId: selectedLineId})
             .then(weightModuleCreated)
             .catch((error) => showErrorInfo(httpErrorHandler(error)));
@@ -38,13 +39,13 @@ const WeightModuleCreateCmp = ({
 
     return <Container>
         {authorizationService.isAdmin() && <>
-            <ButtonCmp label="Dodaj nowy moduł wagowy I"
+            <ButtonCmp label={`Dodaj nowy moduł wagowy ${firstModule ? "I" : "II"}`}
                        onClick={() => modalHandler.showModal()}/> <ModalDialogCmp title="Dodaj nowy moduł wagowy"
                                                                                   handler={modalHandler}></ModalDialogCmp>
-            <ModalDialogCmp title="Dodaj nowy moduł wagowy I" handler={modalHandler}>
+            <ModalDialogCmp title={`Dodaj nowy moduł wagowy ${firstModule ? "I" : "II"}`} handler={modalHandler}>
                 <SelectInputCmp label="Wybierz linie:" value={selectedLineId} setValue={setSelectedLineId}
                                 options={lines}/>
-                <ButtonCmp label="Dodaj moduł wagowy I" color={colors.success} onClick={sendCreateRequest}/>
+                <ButtonCmp label={`Dodaj nowy moduł wagowy ${firstModule ? "I" : "II"}`} color={colors.success} onClick={sendCreateRequest}/>
             </ModalDialogCmp>
         </>
         }</Container>
