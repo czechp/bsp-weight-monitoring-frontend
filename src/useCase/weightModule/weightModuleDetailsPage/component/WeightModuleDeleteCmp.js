@@ -10,14 +10,14 @@ import {StatementContext} from "../../../../App";
 import httpErrorHandler from "../../../../service/http/httpErrorHandler";
 import {useNavigate} from "react-router-dom";
 
-const WeightModuleDeleteCmp = ({weightModuleId}) => {
+const WeightModuleDeleteCmp = ({weightModuleId, firstModule=true}) => {
     const modalHandler = useModalDialog();
     const {showSuccessInfo, showErrorInfo} = React.useContext(StatementContext);
     const navigate = useNavigate();
 
 
     function removeButtonConfirmOnClick() {
-        const URL = `/api/weight-modules/${weightModuleId}`;
+        const URL = firstModule ? `/api/weight-modules/${weightModuleId}` : `/api/weight-modules-last/${weightModuleId}`;
         const sendRequestService = new SendRequestService();
         sendRequestService.delete(URL)
             .then(weightModuleRemoved)
