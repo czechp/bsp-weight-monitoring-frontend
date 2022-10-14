@@ -1,14 +1,16 @@
 import styled from "styled-components";
 import SeparatorCmp from "./SeparatorCmp";
 
-const ContainerCmp = ({title, children}) => {
-    return <Container>
-        {title && <HeaderWrapper>
-            <Title>{title}</Title>
-            <SeparatorCmp/>
-        </HeaderWrapper>}
-        {children}
-    </Container>
+const ContainerCmp = ({title, children, loaded = true}) => {
+    return <>
+        {loaded && <Container>
+            {title && <HeaderWrapper>
+                <Title>{title}</Title>
+                <SeparatorCmp/>
+            </HeaderWrapper>}
+            {children}
+        </Container>}
+    </>
 }
 
 const Container = styled.div`
@@ -28,7 +30,7 @@ const HeaderWrapper = styled.div`
 `
 
 const Title = styled.h3`
-    margin-bottom: 0;
+  margin-bottom: 0;
 `;
 
 export default ContainerCmp;

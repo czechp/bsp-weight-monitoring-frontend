@@ -5,16 +5,12 @@ import DosingDevicesListCmp from "./component/DosingDevicesListCmp";
 const DosingDeviceListPage = () => {
     const getRequestService = new GetRequestService();
     const URL_FIRST_MODULES = "/api/dosing-devices/first";
-    const {objects: dosingDevicesFirst} = getRequestService.getObjectsArray(URL_FIRST_MODULES);
+    const {objects: dosingDevicesFirst, setSortingField: setSortingForFirst} = getRequestService.getObjectsArray(URL_FIRST_MODULES);
 
-    console.log(dosingDevicesFirst)
+    const dataLoaded = dosingDevicesFirst;
 
-    return <PageCmp title="Dysze dozujące">
-        {
-            dosingDevicesFirst && <>
-                <DosingDevicesListCmp dosingDevices={dosingDevicesFirst} title={"Moduł I"} />
-            </>
-        }
+    return <PageCmp title="Dysze dozujące" loaded={dataLoaded}>
+                <DosingDevicesListCmp dosingDevices={dosingDevicesFirst} setSorting={setSortingForFirst} title={"Moduł I"} />
     </PageCmp>
 }
 
