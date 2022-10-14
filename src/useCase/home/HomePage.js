@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {faIndustry, faScaleBalanced, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faFilter, faIndustry, faScaleBalanced, faUser} from "@fortawesome/free-solid-svg-icons";
 
 
 import PageCmp from "../../component/PageCmp";
@@ -17,6 +17,7 @@ const HomePage = () => {
         <Container>
             <TileCmp path="/production-lines" title={"Linie"} icon={faIndustry}/>
             <TileCmp path="/weight-modules" title={"Moduły wagowe"} icon={faScaleBalanced}/>
+            <TileCmp path="/dosing-devices" title={"Dysze dozujące"} icon={faFilter}/>
             <TileCmp path="/accounts" title={"Użytkownicy"} icon={faUser}/>
         </Container>
     </PageCmp>
