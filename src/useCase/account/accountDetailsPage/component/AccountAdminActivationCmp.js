@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import FormCmp from "../../../../component/FormCmp";
+import ContainerCmp from "../../../../component/ContainerCmp";
 import ButtonCmp from "../../../../component/ButtonCmp";
 import colors from "../../../../configuration/style/colors";
 import {StatementContext} from "../../../../App";
@@ -33,13 +33,13 @@ const AccountAdminActivationCmp = ({accountId, reloadAccount}) => {
             .catch((error) => showErrorInfo(httpErrorHandler(error)));
     }
 
-    return <FormCmp title="Aktywacja administratora">
+    return <ContainerCmp title="Aktywacja administratora">
         <Container>
             <ButtonCmp label="Aktywuj" style={{width: "45%"}} color={colors.success} onClick={activationBtnOnClick}/>
             <ButtonCmp label="Dezaktywuj" style={{width: "45%"}} color={colors.danger}
                        onClick={deactivationBtnOnClick}/>
         </Container>
-    </FormCmp>
+    </ContainerCmp>
 }
 
 const Container = styled.div`

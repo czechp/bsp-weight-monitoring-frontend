@@ -2,7 +2,7 @@ import React from "react";
 import {useLocation, useNavigate} from "react-router-dom";
 
 import PageCmp from "../../../component/PageCmp";
-import FormCmp from "../../../component/FormCmp";
+import ContainerCmp from "../../../component/ContainerCmp";
 import TextInputCmp from "../../../component/TextInputCmp";
 import ButtonCmp from "../../../component/ButtonCmp";
 import activationCodeFieldValidator from "./validator/activationCodeFieldValidator";
@@ -47,7 +47,7 @@ const ActivationForm = ({activationCode: myActivationCode}) => {
             showErrorInfo("Kod aktywacyjny musi mieć 36 znaków")
     }
 
-    return <FormCmp>
+    return <ContainerCmp>
         <TextInputCmp label="Kod aktywacyjny:"
                       value={activationCode}
                       onChange={setActivationCode}
@@ -55,7 +55,7 @@ const ActivationForm = ({activationCode: myActivationCode}) => {
                       minLength={UUID_LENGTH}
         />
         <ButtonCmp label="Aktywuj konto" onClick={activationBtnOnClick}/>
-    </FormCmp>
+    </ContainerCmp>
 }
 
 

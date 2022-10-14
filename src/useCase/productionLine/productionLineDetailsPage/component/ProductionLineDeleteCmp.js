@@ -1,7 +1,7 @@
 import React from "react";
 
 import ModalDialogCmp, {useModalDialog} from "../../../../component/ModalDialogCmp";
-import FormCmp from "../../../../component/FormCmp";
+import ContainerCmp from "../../../../component/ContainerCmp";
 import AuthorizationService from "../../../../service/authorization/authorizationService";
 import ButtonCmp from "../../../../component/ButtonCmp";
 import colors from "../../../../configuration/style/colors";
@@ -31,14 +31,14 @@ const ProductionLineDeleteCmp = ({productionLine}) => {
     }
 
     return <>
-        {authorizationService.isAdmin() && <FormCmp>
+        {authorizationService.isAdmin() && <ContainerCmp>
             <ButtonCmp color={colors.danger} label={`Usuń linie -${productionLine.lineName}`}
                        onClick={modalHandler.showModal}/>
             <ModalDialogCmp handler={modalHandler} title="Potwierdzenie usunięcia">
                 <p> Czy na pewno chcesz usunąć linie {`${productionLine.lineName}`}?</p>
                 <ButtonCmp label="Usuń" color={colors.success} onClick={sendDeleteRequest}/>
             </ModalDialogCmp>
-        </FormCmp>}
+        </ContainerCmp>}
     </>
 }
 

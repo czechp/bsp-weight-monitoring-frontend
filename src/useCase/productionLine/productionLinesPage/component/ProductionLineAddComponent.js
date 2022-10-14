@@ -1,6 +1,6 @@
 import React from "react";
 
-import FormCmp from "../../../../component/FormCmp";
+import ContainerCmp from "../../../../component/ContainerCmp";
 import ButtonCmp from "../../../../component/ButtonCmp";
 import ModalDialogCmp, {useModalDialog} from "../../../../component/ModalDialogCmp";
 import AuthorizationService from "../../../../service/authorization/authorizationService";
@@ -53,7 +53,7 @@ const ProductionLineAddComponent = ({
     return <>
         {
             authorizationService.isAdmin() &&
-            <FormCmp>
+            <ContainerCmp>
                 <ButtonCmp label="Dodaj linie" onClick={modalHandler.showModal}/>
                 <ModalDialogCmp title="Dodaj nowa linie" handler={modalHandler}>
                     <TextInputCmp
@@ -65,7 +65,7 @@ const ProductionLineAddComponent = ({
                     />
                     <ButtonCmp label="Dodaj" onClick={addButtonOnClick} color={colors.success}/>
                 </ModalDialogCmp>
-            </FormCmp>
+            </ContainerCmp>
         }
     </>
 }

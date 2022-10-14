@@ -1,6 +1,6 @@
 import React from "react";
 
-import FormCmp from "../../../../component/FormCmp";
+import ContainerCmp from "../../../../component/ContainerCmp";
 import TextInputCmp from "../../../../component/TextInputCmp";
 import ButtonCmp from "../../../../component/ButtonCmp";
 import colors from "../../../../configuration/style/colors";
@@ -53,7 +53,7 @@ const RestorePasswordApplyTokenCmp = ({defaultToken}) => {
             sendNewPasswordRequest();
     }
 
-    return <FormCmp>
+    return <ContainerCmp>
         <TextInputCmp label="Restore token:" value={token} onChange={setToken}
                       placeholder="Paste token from email message"/>
         <TextInputCmp label="New password:" value={newPassword} onChange={setNewPassword} type="password"
@@ -62,7 +62,7 @@ const RestorePasswordApplyTokenCmp = ({defaultToken}) => {
                       type="password"
                       placeholder="Confirm your new password" minLength={3}/>
         <ButtonCmp label="Create new password" color={colors.success} onClick={createNewPwdBtnOnClick}/>
-    </FormCmp>
+    </ContainerCmp>
 }
 
 export default RestorePasswordApplyTokenCmp;

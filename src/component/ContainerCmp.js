@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import SeparatorCmp from "./SeparatorCmp";
 
-const FormCmp = ({title, children}) => {
+const ContainerCmp = ({title, children}) => {
     return <Container>
         {title && <HeaderWrapper>
             <Title>{title}</Title>
@@ -31,4 +31,4 @@ const Title = styled.h3`
     margin-bottom: 0;
 `;
 
-export default FormCmp;
+export default ContainerCmp;

@@ -1,6 +1,6 @@
 import React from "react";
 
-import FormCmp from "../../../../component/FormCmp";
+import ContainerCmp from "../../../../component/ContainerCmp";
 import ButtonCmp from "../../../../component/ButtonCmp";
 import colors from "../../../../configuration/style/colors";
 import ModalDialogCmp, {useModalDialog} from "../../../../component/ModalDialogCmp";
@@ -31,14 +31,14 @@ const AccountDeleteCmp = ({accountId}) => {
         navigate("/accounts")
     }
 
-    return <FormCmp title="Usuń konto">
+    return <ContainerCmp title="Usuń konto">
         <ButtonCmp label="Usuń" color={colors.danger} onClick={deleteBtnOnClick}/>
         <ModalDialogCmp title="Do you want to remove this account?" handler={modalHandler}>
-            <FormCmp>
+            <ContainerCmp>
                 <ButtonCmp label="Usuń" onClick={confirmRemovingBtnOnClick} color={colors.success}/>
-            </FormCmp>
+            </ContainerCmp>
         </ModalDialogCmp>
-    </FormCmp>
+    </ContainerCmp>
 }
 
 export default AccountDeleteCmp;

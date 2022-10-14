@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import FormCmp from "../../../../component/FormCmp";
+import ContainerCmp from "../../../../component/ContainerCmp";
 import ButtonCmp from "../../../../component/ButtonCmp";
 import SelectFieldCmp from "../../../../component/SelectFieldCmp";
 import {ACCOUNT_ROLES} from "../../../../constant/ACCOUNT_ROLES";
@@ -27,12 +27,12 @@ const AccountChangeRoleCmp = ({account, reloadAccount}) => {
         reloadAccount();
     }
 
-    return <FormCmp title="Zmień uprawnienia">
+    return <ContainerCmp title="Zmień uprawnienia">
         <Container>
             <SelectFieldCmp value={accountRole} onChange={setAccountRole} options={ACCOUNT_ROLES} width={45}/>
             <ButtonCmp label="Zmień uprawnienia" width={45} onClick={changeRoleBtnOnClick}/>
         </Container>
-    </FormCmp>
+    </ContainerCmp>
 }
 
 const Container = styled.div`
