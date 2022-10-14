@@ -1,5 +1,6 @@
 import PageCmp from "../../../component/PageCmp";
 import GetRequestService from "../../../service/http/getRequestService";
+import DosingDevicesListCmp from "./component/DosingDevicesListCmp";
 
 const DosingDeviceListPage = () => {
     const getRequestService = new GetRequestService();
@@ -9,7 +10,11 @@ const DosingDeviceListPage = () => {
     console.log(dosingDevicesFirst)
 
     return <PageCmp title="Dysze dozujące">
-
+        {
+            dosingDevicesFirst && <>
+                <DosingDevicesListCmp dosingDevices={dosingDevicesFirst} title={"Moduł I"} />
+            </>
+        }
     </PageCmp>
 }
 
