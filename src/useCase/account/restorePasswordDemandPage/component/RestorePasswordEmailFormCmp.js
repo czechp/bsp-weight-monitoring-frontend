@@ -1,6 +1,6 @@
 import React from "react";
 
-import FormCmp from "../../../../component/FormCmp";
+import ContainerCmp from "../../../../component/ContainerCmp";
 import TextInputCmp from "../../../../component/TextInputCmp";
 import ButtonCmp from "../../../../component/ButtonCmp";
 import {FieldsValidator} from "../../../../service/validator/fieldsValidator";
@@ -40,10 +40,10 @@ const RestorePasswordEmailFormCmp = () => {
             showErrorInfo("Check correctness of email field");
     }
 
-    return <FormCmp>
+    return <ContainerCmp>
         <TextInputCmp label="Email:" value={userEmail} onChange={setUserEmail} placeholder="Type your email"/>
         <ButtonCmp label="Send restore token" onClick={sendRestoreTokenBtnOnClick}/>
-    </FormCmp>
+    </ContainerCmp>
 }
 
 export default RestorePasswordEmailFormCmp;

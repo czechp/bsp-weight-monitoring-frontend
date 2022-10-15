@@ -26,7 +26,8 @@ import ProductionLineDetailsPage from "./useCase/productionLine/productionLineDe
 import ProductionLinesListPage from "./useCase/productionLine/productionLinesPage/ProductionLinesListPage";
 import WeightModuleListPage from "./useCase/weightModule/weightModuleListPage/WeightModuleListPage";
 import WeightModuleDetailsPage from "./useCase/weightModule/weightModuleDetailsPage/WeightModuleDetailsPage";
-import WeightModuleLastDetailsPage from "./useCase/weightModule/weightModuleLastDetalsPage/WeightModuleLastDetailsPage";
+import WeightModuleLastDetailsPage from "./useCase/weightModule/weightModuleLastDetailsPage/WeightModuleLastDetailsPage";
+import DosingDeviceListPage from "./useCase/dosingDevice/dosingDevicesListPage/DosingDeviceListPage";
 
 export const StatementContext = createStatementContext();
 
@@ -65,6 +66,7 @@ function App() {
                                    element={<LoginGuard><WeightModuleDetailsPage/></LoginGuard>}/>
                             <Route path="/weight-module-last-details"
                                    element={<LoginGuard><WeightModuleLastDetailsPage/></LoginGuard>}/>
+                            <Route path="/dosing-devices" element={<LoginGuard><DosingDeviceListPage /></LoginGuard>} />
                         </Routes>
 
                     </ContainerLayout>

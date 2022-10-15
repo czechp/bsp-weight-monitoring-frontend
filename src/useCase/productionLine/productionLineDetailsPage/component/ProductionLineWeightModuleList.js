@@ -1,5 +1,5 @@
 import GetRequestService from "../../../../service/http/getRequestService";
-import FormCmp from "../../../../component/FormCmp";
+import ContainerCmp from "../../../../component/ContainerCmp";
 import WeightModuleDetailsCmp from "../../../weightModule/weightModuleDetailsPage/component/WeightModuleDetailsCmp";
 
 const ProductionLineWeightModuleList = ({productionLineId, firstModule=true}) => {
@@ -8,12 +8,12 @@ const ProductionLineWeightModuleList = ({productionLineId, firstModule=true}) =>
     const {objects: weightModules} = getRequestService.getObjectsArray(URL);
 
 
-    return <FormCmp title={`Moduł ${firstModule ? "I": "II"}`}>
+    return <ContainerCmp title={`Moduł ${firstModule ? "I": "II"}`}>
         {weightModules && <>
             {weightModules.map((module, index) => <WeightModuleDetailsCmp firstModule={firstModule} key={`${module.id}-${index}-${Math.random()}`}
                                                                           weightModule={module}/>)}
         </>}
-    </FormCmp>
+    </ContainerCmp>
 }
 
 export default ProductionLineWeightModuleList;

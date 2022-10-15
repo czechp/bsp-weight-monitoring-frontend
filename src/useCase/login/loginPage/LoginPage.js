@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 import styled from "styled-components";
 
 import PageCmp from "../../../component/PageCmp";
-import FormCmp from "../../../component/FormCmp";
+import ContainerCmp from "../../../component/ContainerCmp";
 import TextInputCmp from "../../../component/TextInputCmp";
 import ButtonCmp from "../../../component/ButtonCmp";
 import {StatementContext} from "../../../App";
@@ -63,7 +63,7 @@ const LoginPage = () => {
     }, [navigate]);
 
     return <PageCmp title="Login">
-        <FormCmp>
+        <ContainerCmp>
             <TextInputCmp placeholder="Wpisz login" label="Login:" value={username} onChange={setUsername}
                           minLength={3}/>
             <TextInputCmp type="password" placeholder="Wpisz hasło" label="Hasło:" value={password}
@@ -73,7 +73,7 @@ const LoginPage = () => {
                 hasła</RestorePasswordLink></RestorePasswordInfo>
             <ButtonCmp label="Rejestracja" onClick={registerBtnOnClick}/>
             <ButtonCmp label="Aktywowanie konta" onClick={activateAccountBtnClick}/>
-        </FormCmp>
+        </ContainerCmp>
     </PageCmp>
 }
 
