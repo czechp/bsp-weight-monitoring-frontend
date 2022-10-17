@@ -10,6 +10,7 @@ import colors from "../../../../configuration/style/colors";
 import SendRequestService from "../../../../service/http/sendRequestService";
 import {StatementContext} from "../../../../App";
 import httpErrorHandler from "../../../../service/http/httpErrorHandler";
+import TextInputCmp from "../../../../component/TextInputCmp";
 
 const WeightModuleCreateCmp = ({
                                    firstModule = true,
@@ -22,10 +23,11 @@ const WeightModuleCreateCmp = ({
     const {showSuccessInfo, showErrorInfo} = React.useContext(StatementContext);
     const lines = useProvideLineList();
     const [selectedLineId, setSelectedLineId] = React.useState(0);
+    const [dosingDevicesAmount, setDosingDevicesAmount] = React.useState(0);
 
     const sendCreateRequest = () => {
-        const URL = firstModule ? "/api/weight-modules": "/api/weight-modules-last";
-        sendRequestService.post(URL, {productionLineId: selectedLineId})
+        const URL = firstModule ? "/api/weight-modules" : "/api/weight-modules-last";
+        sendRequestService.post(URL, {productionLineId: selectedLineId, dosingDevicesAmount})
             .then(weightModuleCreated)
             .catch((error) => showErrorInfo(httpErrorHandler(error)));
     }
@@ -45,7 +47,12 @@ const WeightModuleCreateCmp = ({
             <ModalDialogCmp title={`Dodaj nowy moduł wagowy ${firstModule ? "I" : "II"}`} handler={modalHandler}>
                 <SelectInputCmp label="Wybierz linie:" value={selectedLineId} setValue={setSelectedLineId}
                                 options={lines}/>
-                <ButtonCmp label={`Dodaj nowy moduł wagowy ${firstModule ? "I" : "II"}`} color={colors.success} onClick={sendCreateRequest}/>
+                <TextInputCmp value={dosingDevicesAmount}
+                              onChange={setDosingDevicesAmount} type={"number"}
+                              label="Ilość dyszy dozujących: "
+                              placeholder={"Wpisz ilość dyszy dozujących"}/>
+                <ButtonCmp label={`Dodaj nowy moduł wagowy ${firstModule ? "I" : "II"}`} color={colors.success}
+                           onClick={sendCreateRequest}/>
             </ModalDialogCmp>
         </>
         }</Container>
