@@ -29,7 +29,7 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const Label = styled.label``;
+const Label = styled.h4``;
 
 const Select = styled.select`
   border: none;
