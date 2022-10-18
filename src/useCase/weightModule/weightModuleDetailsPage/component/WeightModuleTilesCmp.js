@@ -21,7 +21,7 @@ const WeightModuleTilesCmp = ({weightModule, firstModule}) => {
                                   text={`${weightModule.productionIndicators.correctProductPercent}%`}
                                   value={weightModule.productionIndicators.correctProductPercent}/></TileInfoCmp>
         <TileInfoCmp title="Waga produktu:"
-                     fontSize="middle">{`${weightModule.productInfo.downRangeWeight.toFixed(1)}-${weightModule.productInfo.upRangeWeight.toFixed(1)} g`}</TileInfoCmp>
+                     fontSize="middle">{`${weightModule.productInfo.upRangeWeight.toFixed(1)}-${weightModule.productInfo.downRangeWeight.toFixed(1)} g`}</TileInfoCmp>
         <TileInfoCmp title="Ilość parafiny razem:"
                      fontSize="middle">{weightModule.productionIndicators.totalMaterialWeight.toFixed(1) + " kg"}</TileInfoCmp>
         <TileInfoCmp title="Ilość produktu:"

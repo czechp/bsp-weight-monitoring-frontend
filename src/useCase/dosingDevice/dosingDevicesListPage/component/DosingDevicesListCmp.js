@@ -44,7 +44,7 @@ const DosingDeviceRow = ({dosingDevice}) => {
     return <Tr>
         <Td>{dosingDevice.recordNumber}</Td>
         <Td>{dosingDevice.moduleInfo.lineName}</Td>
-        <Td>{`${dosingDevice.totalMaterial} kg`}</Td>
+        <Td>{`${dosingDevice.totalMaterial.toFixed(1)} kg`}</Td>
         <Td>{`${dosingDevice.measures.correctMeasurePercent}%`}</Td>
         <Td>{`${dosingDevice.measures.averageMeasure.toFixed(1)} g`}</Td>
         <Td>{`${dosingDevice.measures.amountBelowMeasures} szt.`}</Td>
