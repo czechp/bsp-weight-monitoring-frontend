@@ -1,10 +1,12 @@
 import ContainerCmp from "../../../../component/ContainerCmp";
 import {Table, Tbody, Td, Th, Thead, Tr} from "../../../../configuration/styledComponents/Table";
 import DateConverter from "../../../../service/converter/dateConverter";
+import {useNavigate} from "react-router-dom";
 
 const ReportListCmp = ({
                            reports,
-                           setSortingField = () => {}
+                           setSortingField = () => {
+                           }
                        }) => {
     return <ContainerCmp title="Raporty" loaded={reports}>
         <Table>
@@ -32,7 +34,13 @@ const ReportListCmp = ({
 
 const ReportInfoRow = ({report}) => {
     const dateConverter = new DateConverter();
-    return <Tr>
+    const navigate = useNavigate();
+
+    function navigateToReportDetails() {
+        navigate("/report-details", {state: report.id})
+    }
+
+    return <Tr onClick={navigateToReportDetails}>
         <Td>{report.id}</Td>
         <Td>{report.lineName}</Td>
         <Td>{dateConverter.toFullDate(report.reportDate)}</Td>
