@@ -2,6 +2,7 @@ import PageCmp from "../../../component/PageCmp";
 import {useLocation} from "react-router-dom";
 import GetRequestService from "../../../service/http/getRequestService";
 import ReportDetailsTilesCmp from "./component/ReportDetailsTilesCmp";
+import ReportDosingDevicesListCmp from "./component/ReportDosingDevicesListCmp";
 
 const ReportDetailsPage = () => {
     const {state: reportId} = useLocation();
@@ -12,6 +13,8 @@ const ReportDetailsPage = () => {
     return <PageCmp title="Szczegóły raportu" loaded={report}>
         {report && <>
             <ReportDetailsTilesCmp report={report} />
+            <ReportDosingDevicesListCmp reportId={reportId} isFirst={true} />
+            <ReportDosingDevicesListCmp reportId={reportId} isFirst={false}/>
         </>}
     </PageCmp>
 }
