@@ -26,8 +26,11 @@ import ProductionLineDetailsPage from "./useCase/productionLine/productionLineDe
 import ProductionLinesListPage from "./useCase/productionLine/productionLinesPage/ProductionLinesListPage";
 import WeightModuleListPage from "./useCase/weightModule/weightModuleListPage/WeightModuleListPage";
 import WeightModuleDetailsPage from "./useCase/weightModule/weightModuleDetailsPage/WeightModuleDetailsPage";
-import WeightModuleLastDetailsPage from "./useCase/weightModule/weightModuleLastDetailsPage/WeightModuleLastDetailsPage";
+import WeightModuleLastDetailsPage
+    from "./useCase/weightModule/weightModuleLastDetailsPage/WeightModuleLastDetailsPage";
 import DosingDeviceListPage from "./useCase/dosingDevice/dosingDevicesListPage/DosingDeviceListPage";
+import ReportListPage from "./useCase/report/reportListPage/ReportListPage";
+import ReportDetailsPage from "./useCase/report/reportDetailsPage/ReportDetailsPage";
 
 export const StatementContext = createStatementContext();
 
@@ -66,7 +69,9 @@ function App() {
                                    element={<LoginGuard><WeightModuleDetailsPage/></LoginGuard>}/>
                             <Route path="/weight-module-last-details"
                                    element={<LoginGuard><WeightModuleLastDetailsPage/></LoginGuard>}/>
-                            <Route path="/dosing-devices" element={<LoginGuard><DosingDeviceListPage /></LoginGuard>} />
+                            <Route path="/dosing-devices" element={<LoginGuard><DosingDeviceListPage/></LoginGuard>}/>
+                            <Route path="/reports" element={<LoginGuard><ReportListPage/> </LoginGuard>}/>
+                            <Route path="/report-details" element={<LoginGuard><ReportDetailsPage/></LoginGuard>}/>
                         </Routes>
 
                     </ContainerLayout>
