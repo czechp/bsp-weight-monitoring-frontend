@@ -36,7 +36,7 @@ const WeightModuleInfoRow = ({weightModule, firstModule}) => {
         <Td style={{color: statusColor}}>{weightModule.moduleStatus.status ? "Włączony" : "Wyłączony"}</Td>
         <Td>{weightModule.productionIndicators.correctProductPercent.toFixed(1)} %</Td>
         <Td>{weightModule.productionIndicators.totalProductPcs} szt.</Td>
-        <Td>{weightModule.productionIndicators.totalMaterialWeight} kg</Td>
+        <Td>{weightModule.productionIndicators.totalMaterialWeight.toFixed(2)} kg</Td>
     </Tr>
 }
 
