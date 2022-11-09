@@ -17,8 +17,8 @@ const WeightModuleTilesCmp = ({weightModule, firstModule}) => {
         <TileInfoCmp title="Poprawnych pomiarów:"
                      fontSize="middle">
             <CircleProgressBarCmp style={{width: "60%"}}
-                                  color={determineCorrectnessColor(weightModule.productionIndicators.totalProductPercent)}
-                                  text={`${weightModule.productionIndicators.correctProductPercent}%`}
+                                  color={determineCorrectnessColor(weightModule.productionIndicators.correctProductPercent)}
+                                  text={`${weightModule.productionIndicators.correctProductPercent.toFixed(2)}%`}
                                   value={weightModule.productionIndicators.correctProductPercent}/></TileInfoCmp>
         <TileInfoCmp title="Waga produktu:"
                      fontSize="middle">{`${weightModule.productInfo.upRangeWeight.toFixed(1)}-${weightModule.productInfo.downRangeWeight.toFixed(1)} g`}</TileInfoCmp>
@@ -27,7 +27,7 @@ const WeightModuleTilesCmp = ({weightModule, firstModule}) => {
         <TileInfoCmp title="Ilość produktu:"
                      fontSize="middle">{weightModule.productionIndicators.totalProductPcs + " szt."}</TileInfoCmp>
         <TileInfoCmp title="Aktualny pomiar:"
-                     fontSize="middle">{weightModule.moduleStatus.currentMeasure + " g"}</TileInfoCmp>
+                     fontSize="middle">{weightModule.moduleStatus.currentMeasure.toFixed(2) + " g"}</TileInfoCmp>
         <TileInfoCmp title="Aktualny rząd:"
                      fontSize="middle">{weightModule.moduleStatus.currentDosingDevice}</TileInfoCmp>
         {!firstModule && <>
