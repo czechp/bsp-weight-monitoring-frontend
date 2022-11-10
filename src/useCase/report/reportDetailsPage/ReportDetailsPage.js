@@ -11,7 +11,7 @@ const ReportDetailsPage = () => {
     const getRequestService = new GetRequestService();
     const {object: report} = getRequestService.getObject(URL);
 
-    return <PageCmp title="Szczegóły raportu" loaded={report}>z
+    return <PageCmp title="Szczegóły raportu" loaded={report}>
         {report && <>
             <ReportDetailsTilesCmp report={report} />
             <ReportDosingDevicesListCmp reportId={reportId} isFirst={true} />

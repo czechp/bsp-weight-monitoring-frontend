@@ -15,12 +15,12 @@ const ReportDetailsTilesCmp = ({report}) => {
             <TileInfoCmp title="Poprawnych pomiarów:" fontSize="middle">
                 <CircleProgressBarCmp style={{width: "60%"}}
                                       value={report.correctProductPercent}
-                                      text={`${report.correctProductPercent}%`}
+                                      text={`${report.correctProductPercent.toFixed(2)}%`}
                                       color={colors.primary}
                 />
             </TileInfoCmp>
             <TileInfoCmp title="Ilość produktu:" fontSize="middle">{report.totalProductPcs} szt.</TileInfoCmp>
-            <TileInfoCmp title="Różnica wagi:" fontSize="middle">{report.weightDifference} kg</TileInfoCmp>
+            <TileInfoCmp title="Różnica wagi:" fontSize="middle">{report.weightDifference.toFixed(2)} kg</TileInfoCmp>
             <TileInfoCmp title="Ilość niepoprawnego produktu:" fontSize="middle">{report.incorrectProductPcs} szt.</TileInfoCmp>
             <TileInfoCmp title="Ilość przelanego produktu:" fontSize="middle">{report.overFilledProductPcs} szt.</TileInfoCmp>
             <TileInfoCmp title="Ilość niedolanego produktu:" fontSize="middle">{report.notRefilledProductPcs} szt.</TileInfoCmp>
