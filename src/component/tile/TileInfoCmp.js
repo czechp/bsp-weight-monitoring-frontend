@@ -29,8 +29,8 @@ export default TileInfoCmp;
 
 const Container = styled.div`
   display: flex;
-  border: 4px solid ${({theme}) => theme.colors.primary};
-  width: 22%;
+  border: 2px solid ${({theme}) => theme.colors.primary};
+  width: 25%;
   height: 300px;
   border-radius: 20px;
   margin: 1rem;
@@ -51,4 +51,5 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   align-items: center;
+  text-align: center;
 `;
