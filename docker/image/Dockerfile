@@ -1,4 +1,4 @@
-FROM nginx
+FROM czechprz/nginx-react
 RUN apt-get update -y
 RUN apt-get install curl -y
 RUN apt-get install sudo -y
