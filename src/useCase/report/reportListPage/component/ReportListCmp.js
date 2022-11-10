@@ -45,10 +45,10 @@ const ReportInfoRow = ({report}) => {
         <Td>{report.lineName}</Td>
         <Td>{dateConverter.toFullDate(report.reportDate)}</Td>
         <Td>{report.workShift}</Td>
-        <Td>{report.correctProductPercent} %</Td>
+        <Td>{report.correctProductPercent.toFixed(2)} %</Td>
         <Td>{report.totalProductPcs} szt.</Td>
         <Td>{report.totalMaterialWeight} kg</Td>
-        <Td>{report.weightDifference} kg</Td>
+        <Td>{report.weightDifference.toFixed(2)} kg</Td>
         <Td>{report.incorrectProductPcs} szt.</Td>
         <Td>{report.overFilledProductPcs} szt.</Td>
         <Td>{report.notRefilledProductPcs} szt.</Td>
