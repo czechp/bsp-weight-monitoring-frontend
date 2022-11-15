@@ -34,7 +34,7 @@ const ReportDosingDeviceRow = ({dosingDevice}) => {
         <Td>{dosingDevice.recordNumber}</Td>
         <Td>{dosingDevice.correctPercent.toFixed(1)} %</Td>
         <Td>{dosingDevice.totalMaterialWeight.toFixed(2)} kg</Td>
-        <Td>{dosingDevice.averageWeight.toFixed(1)} %</Td>
+        <Td>{dosingDevice.averageWeight.toFixed(1)} g</Td>
 
     </Tr>
 }
